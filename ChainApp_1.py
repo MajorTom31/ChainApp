@@ -1,21 +1,25 @@
 from kivy.app import App
+from kivy.uix.gridlayout import GridLayout
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
+from kivy.properties import ObjectProperty
+from kivy.core.window import Window
+
+Window.size = (480, 853)
+
 from kivy.config import Config
+Config.set('kivy', 'keyboard_mode',
+           'systemanddock')
+class Container(GridLayout):
+    pass
 
-Config.set('graphics', 'wight', '100')
-Config.set('graphics', 'height', '1000')
+    # new_tile = ObjectProperty()
+    # def create_tile(self):
+    #     layout.add_widget(New Cahin)
 
-class cardApp (App):
+class ChainApp(App):
     def build(self):
-        bl = BoxLayout(orientation='vertical', 
-                       spacing = 10)
-        btn1 = Button(text='First Card')
-        btn2 = Button(text='Second Card')
-        bl.add_widget(btn1)
-        bl.add_widget(btn2)
-
-        return bl
+        return Container()
 
 if __name__ == "__main__":
-    cardApp().run()
+    ChainApp().run()

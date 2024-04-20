@@ -1,0 +1,50 @@
+<ItemLabel@Label>
+    size_hint_y: 0.2
+    font_size: "25sp"
+
+<ItemText@TextInput>
+    size_hint_y:
+    multiline: False
+
+<Container>
+    rows: 3
+    padding: 50
+
+#    new_tile: tile_label
+
+    ItemLabel:
+        size_hint: 1, 0.1
+        text: "Используемые цепи"
+
+
+    BoxLayout:
+#        id: tile_label
+        orientation: 'vertical'
+
+        BoxLayout:
+            padding: [0, 10, 0, 10]
+            rows: 3
+            orientation: 'vertical'
+
+            ItemLabel:
+                text: "Chain 1"
+
+            ItemText:
+
+            ItemLabel:
+                text: "Chain 1"
+
+            ItemText:
+
+            ItemLabel:
+                text: "Chain 1"
+
+            ItemText:
+
+
+    Button:
+        size_hint: 1, 0.15
+        text: "Add Chain"
+
+#        on_release:
+#            root.create_tile()
